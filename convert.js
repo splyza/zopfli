@@ -12,6 +12,21 @@ try {
 function main() {
 	var files = [];
 
+	const outDir = './out';
+
+	try {
+		if ( fs.existsSync(outDir) ) {
+			fs.readdirSync(outDir).forEach(f => {
+				fs.rmSync(`${outDir}/${f}`);
+			});
+		} else {
+			fs.mkdirSync(outDir);
+		}
+	} catch (e) {
+		console.log(e);
+	}
+	
+
 	fs.readdirSync('./orig').forEach(file => {
 	  	if ( file.indexOf('.png') > -1 ) {
 	    	files.push(file);

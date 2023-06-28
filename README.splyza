@@ -1,4 +1,8 @@
 
+It needs node v16.16.0 or above
+
+-----
+
 First you need to compile the source code for zopflipng
 
 we are gonna use zopflipng to compress the images before upload adding them to splyza teams.
@@ -7,7 +11,9 @@ The instructions for compiling it are in README.zopflipng file.
 
 After you have compiled it.
 
-You will need to add the files that you want to compress here './orig'
+You will need to create these 2 folders: `./orig` and `./out`
+
+You will need to add the files that you want to compress here `./orig`
 
 Then, you need to execute this command:
 
@@ -15,7 +21,7 @@ Then, you need to execute this command:
 node ./convert.js
 ```
 
-Then, the compresed files are gonna appear in this folder './out'
+Then, the compresed files are gonna appear in this folder `./out`
 
 
 Then, you can copy the images from 'out' and paste them in splyza teams img folder.
